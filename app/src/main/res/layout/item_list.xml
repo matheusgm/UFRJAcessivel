@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/item_list_round"
+    >
+
+    <TextView
+        android:id="@+id/lbl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#141617"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/imageLibra"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/libra_white_48"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <ImageView
+            android:id="@+id/imageRampa"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rampa_white_48"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <ImageView
+            android:id="@+id/imageInterpretes"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/interpretes_white_48"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <ImageView
+            android:id="@+id/imageMap"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/mapa_white_48"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
