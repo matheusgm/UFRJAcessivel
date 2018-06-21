@@ -55,6 +55,53 @@ public class ContribuirActivity extends AppCompatActivity implements View.OnClic
 
         criarConexao();
 
+        // TESTE
+
+        /*Local local = new Local();
+        local.setName("Teste 1");
+        local.setTipo("Serviços");
+        local.setNumLibraUp("4");
+        local.setNumLibraDown("4");
+        local.setNumInterpretesUp("5");
+        local.setNumInterpretesDown("2");
+        local.setNumRampaUp("6");
+        local.setNumRampaDown("5");
+
+        localRepositorio.inserir2TESTE(local);
+
+        local.setName("Teste 2");
+        local.setTipo("Serviços");
+        local.setNumLibraUp("2");
+        local.setNumLibraDown("1");
+        local.setNumInterpretesUp("3");
+        local.setNumInterpretesDown("4");
+        local.setNumRampaUp("5");
+        local.setNumRampaDown("5");
+
+        localRepositorio.inserir2TESTE(local);
+
+        local.setName("Teste 3");
+        local.setTipo("Serviços");
+        local.setNumLibraUp("6");
+        local.setNumLibraDown("5");
+        local.setNumInterpretesUp("2");
+        local.setNumInterpretesDown("2");
+        local.setNumRampaUp("3");
+        local.setNumRampaDown("4");
+
+        localRepositorio.inserir2TESTE(local);
+
+        local.setName("Teste 4");
+        local.setTipo("Serviços");
+        local.setNumLibraUp("2");
+        local.setNumLibraDown("5");
+        local.setNumInterpretesUp("6");
+        local.setNumInterpretesDown("6");
+        local.setNumRampaUp("2");
+        local.setNumRampaDown("3");
+
+        localRepositorio.inserir2TESTE(local);*/
+
 
 
     }

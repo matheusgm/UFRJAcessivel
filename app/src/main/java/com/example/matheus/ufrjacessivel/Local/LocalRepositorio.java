@@ -36,29 +36,116 @@ public class LocalRepositorio {
 
     }
 
+    public void inserir2TESTE(Local local){
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("NOME", local.getName());
+        contentValues.put("TIPO", local.getTipo());
+        contentValues.put("Num_Libras_Up",local.getNumLibraUp());
+        contentValues.put("Num_Libras_Down",local.getNumLibraDown());
+        contentValues.put("Num_Rampas_Up",local.getNumRampaUp());
+        contentValues.put("Num_Rampas_Down",local.getNumRampaDown());
+        contentValues.put("Num_Interpretes_Up",local.getNumInterpretesUp());
+        contentValues.put("Num_Interpretes_Down",local.getNumInterpretesDown());
+        contentValues.put("Tem_Mapa","0");
+
+
+        conexao.insertOrThrow("LOCAL",null,contentValues);
+
+    }
+
     public void update(ContentValues values, int id){
         conexao.update("LOCAL", values, "CODIGO = "+id, null);
     }
 
-    public void atualizar(ArrayList<Local> itens){
-        /*
+    public void ordenarLibras(ArrayList<Local> local){
+
         int ini;
         int fim;
-        for(fim = materias.size() - 1; fim > 0; fim-- ){
+        for(fim = local.size() - 1; fim > 0; fim-- ){
             int troca = 0;
             for(ini = 0; ini < fim; ini++){
-                if( Float.parseFloat(materias.get(ini).getMateriaCR()) > Float.parseFloat(materias.get(ini+1).getMateriaCR())){
-                    Materia temp = materias.get(ini);
-                    materias.set(ini, materias.get(ini + 1));
-                    materias.set(ini + 1, temp);
+
+                if( (Integer.parseInt(local.get(ini).getNumLibraUp()) - Integer.parseInt(local.get(ini).getNumLibraDown())) < (Integer.parseInt(local.get(ini + 1).getNumLibraUp()) - Integer.parseInt(local.get(ini + 1).getNumLibraDown())) ){
+                    Local temp = local.get(ini);
+                    local.set(ini, local.get(ini + 1));
+                    local.set(ini + 1, temp);
                     troca++;
+                }else if( (Integer.parseInt(local.get(ini).getNumLibraUp()) - Integer.parseInt(local.get(ini).getNumLibraDown())) == (Integer.parseInt(local.get(ini + 1).getNumLibraUp()) - Integer.parseInt(local.get(ini + 1).getNumLibraDown())) ){
+
+                    if( Integer.parseInt(local.get(ini).getNumLibraUp()) < Integer.parseInt(local.get(ini + 1).getNumLibraDown()) ){
+                        Local temp = local.get(ini);
+                        local.set(ini, local.get(ini + 1));
+                        local.set(ini + 1, temp);
+                        troca++;
+                    }
+
                 }
             }
             if(troca==0){
                 break;
             }
         }
-        */
+    }
+
+    public void ordenarInterpretes(ArrayList<Local> local){
+
+        int ini;
+        int fim;
+        for(fim = local.size() - 1; fim > 0; fim-- ){
+            int troca = 0;
+            for(ini = 0; ini < fim; ini++){
+
+                if( (Integer.parseInt(local.get(ini).getNumInterpretesUp()) - Integer.parseInt(local.get(ini).getNumInterpretesDown())) < (Integer.parseInt(local.get(ini + 1).getNumInterpretesUp()) - Integer.parseInt(local.get(ini + 1).getNumInterpretesDown())) ){
+                    Local temp = local.get(ini);
+                    local.set(ini, local.get(ini + 1));
+                    local.set(ini + 1, temp);
+                    troca++;
+                }else if( (Integer.parseInt(local.get(ini).getNumInterpretesUp()) - Integer.parseInt(local.get(ini).getNumInterpretesDown())) == (Integer.parseInt(local.get(ini + 1).getNumInterpretesUp()) - Integer.parseInt(local.get(ini + 1).getNumInterpretesDown())) ){
+
+                    if( Integer.parseInt(local.get(ini).getNumInterpretesUp()) < Integer.parseInt(local.get(ini + 1).getNumInterpretesDown()) ){
+                        Local temp = local.get(ini);
+                        local.set(ini, local.get(ini + 1));
+                        local.set(ini + 1, temp);
+                        troca++;
+                    }
+
+                }
+            }
+            if(troca==0){
+                break;
+            }
+        }
+    }
+
+    public void ordenarRampas(ArrayList<Local> local){
+
+        int ini;
+        int fim;
+        for(fim = local.size() - 1; fim > 0; fim-- ){
+            int troca = 0;
+            for(ini = 0; ini < fim; ini++){
+
+                if( (Integer.parseInt(local.get(ini).getNumRampaUp()) - Integer.parseInt(local.get(ini).getNumRampaDown())) < (Integer.parseInt(local.get(ini + 1).getNumRampaUp()) - Integer.parseInt(local.get(ini + 1).getNumRampaDown())) ){
+                    Local temp = local.get(ini);
+                    local.set(ini, local.get(ini + 1));
+                    local.set(ini + 1, temp);
+                    troca++;
+                }else if( (Integer.parseInt(local.get(ini).getNumRampaUp()) - Integer.parseInt(local.get(ini).getNumRampaDown())) == (Integer.parseInt(local.get(ini + 1).getNumRampaUp()) - Integer.parseInt(local.get(ini + 1).getNumRampaDown())) ){
+
+                    if( Integer.parseInt(local.get(ini).getNumRampaUp()) < Integer.parseInt(local.get(ini + 1).getNumRampaDown()) ){
+                        Local temp = local.get(ini);
+                        local.set(ini, local.get(ini + 1));
+                        local.set(ini + 1, temp);
+                        troca++;
+                    }
+
+                }
+            }
+            if(troca==0){
+                break;
+            }
+        }
     }
 
     public void excluir(int codigo){

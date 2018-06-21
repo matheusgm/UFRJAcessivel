@@ -27,9 +27,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     private TextView lblLibra;
     private TextView lblRampas;
     private TextView lblInterpretes;
-
-    private ArrayList<String> lstLblNomes;
-    private boolean[] lstLblAtv = {false, false, false};
+    private TextView lblAtual = null;
 
     private DadosOpenHelper dadosOpenHelper;
     private SQLiteDatabase conexao;
@@ -55,11 +53,6 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         lblRampas.setOnClickListener(this);
         lblInterpretes.setOnClickListener(this);
 
-        lstLblNomes = new ArrayList<>();
-        lstLblNomes.add("Libra");
-        lstLblNomes.add("Rampas");
-        lstLblNomes.add("Interpretes");
-
         criarConexao();
 
         tipo = getIntent().getStringExtra("TIPO_NOME");
@@ -82,9 +75,15 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     private void visualizarLista(String S){
 
         itens = localRepositorio.buscarTodos(S);
-        if(itens.size() > 0) {
-            localRepositorio.atualizar(itens);
+
+        if(lblAtual == lblLibra) {
+            localRepositorio.ordenarLibras(itens);
+        }else if(lblAtual == lblInterpretes) {
+            localRepositorio.ordenarInterpretes(itens);
+        }else if(lblAtual == lblRampas) {
+            localRepositorio.ordenarRampas(itens);
         }
+
         LocalListAdpter arrayAdapter = new LocalListAdpter(this,itens);
         lstViewItem.setAdapter(arrayAdapter);
 
@@ -112,34 +111,34 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
+
         TextView lbl = v.findViewById(v.getId());
-        System.out.println(lbl.getText());
-        if(lbl.getTypeface().isBold()){
-            lbl.setTypeface(Typeface.DEFAULT);
-            lbl.setTextSize(15);
-            lstLblAtv[lstLblNomes.indexOf(lbl.getText().toString())] = false;
+
+        if(lbl == lblAtual){
+            clearLabel(lbl);
+            lblAtual = null;
         }else{
+
+            lblAtual = lbl;
+
+            clearLabel(lblLibra);
+            clearLabel(lblInterpretes);
+            clearLabel(lblRampas);
+
             lbl.setTypeface(Typeface.DEFAULT_BOLD);
             lbl.setTextSize(20);
-            lstLblAtv[lstLblNomes.indexOf(lbl.getText().toString())] = true;
+
         }
 
-        String[] lst = {"Nome1","Nome2","Nome3"};
-
-        String[] clause = new String[lst.length];
-        int x = 0;
-        for(int i=0; i<lstLblNomes.size();i++){
-            if(lstLblAtv[i]){
-                clause[i]="'"+lst[i]+"'";
-                x=1;
-            }
-        }
-
-        if(x==1){
-            visualizarLista(clauseMain+" AND NOME IN ("+ TextUtils.join(",",clause)+")");
-        }else{
-            visualizarLista(clauseMain);
-        }
+        visualizarLista(clauseMain);
 
     }
+
+    private void clearLabel(TextView lbl){
+        lbl.setTypeface(Typeface.DEFAULT);
+        lbl.setTextSize(15);
+    }
+
+
+
 }
