@@ -15,10 +15,13 @@ public class ScriptDLL {
         sql.append(" TIPO VARCHAR (200), "); // Servico, Aula, Restaurante...
         sql.append(" Num_Libras_Up VARCHAR (10), ");
         sql.append(" Num_Libras_Down VARCHAR (10), ");
+        sql.append(" Cor_Libras VARCHAR (10), "); // VERM, VERD, NULL
         sql.append(" Num_Rampas_Up VARCHAR (10), ");
         sql.append(" Num_Rampas_Down VARCHAR (10), ");
+        sql.append(" Cor_Rampas VARCHAR (10), "); // VERM, VERD, NULL
         sql.append(" Num_Interpretes_Up VARCHAR (10), ");
         sql.append(" Num_Interpretes_Down VARCHAR (10), ");
+        sql.append(" Cor_Interpretes VARCHAR (10), "); // VERM, VERD, NULL
         sql.append(" Tem_Mapa VARCHAR (1) ) ");  // 0 = FALSE e 1 = TRUE
 
         return sql.toString();

@@ -4,14 +4,41 @@ public class Local {
 
     private int id;
     private String name;
-    private String NumLibraUp;
     private String Tipo;
+    private String NumLibraUp;
     private String NumLibraDown;
+    private String CorLibras;
     private String NumRampaUp;
     private String NumRampaDown;
+    private String CorRampas;
     private String NumInterpretesUp;
     private String NumInterpretesDown;
+    private String CorInterpretes;
     private String temMapa;
+
+    public String getCorLibras() {
+        return CorLibras;
+    }
+
+    public void setCorLibras(String corLibras) {
+        CorLibras = corLibras;
+    }
+
+    public String getCorRampas() {
+        return CorRampas;
+    }
+
+    public void setCorRampas(String corRampas) {
+        CorRampas = corRampas;
+    }
+
+    public String getCorInterpretes() {
+        return CorInterpretes;
+    }
+
+    public void setCorInterpretes(String corInterpretes) {
+        CorInterpretes = corInterpretes;
+    }
 
     public int getId() {
         return id;

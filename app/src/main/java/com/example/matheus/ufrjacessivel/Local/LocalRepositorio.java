@@ -25,10 +25,13 @@ public class LocalRepositorio {
         contentValues.put("TIPO", local.getTipo());
         contentValues.put("Num_Libras_Up","0");
         contentValues.put("Num_Libras_Down","0");
+        contentValues.put("Cor_Libras", (String) null);
         contentValues.put("Num_Rampas_Up","0");
         contentValues.put("Num_Rampas_Down","0");
+        contentValues.put("Cor_Rampas", (String) null);
         contentValues.put("Num_Interpretes_Up","0");
         contentValues.put("Num_Interpretes_Down","0");
+        contentValues.put("Cor_Interpretes", (String) null);
         contentValues.put("Tem_Mapa","0");
 
 
@@ -43,11 +46,16 @@ public class LocalRepositorio {
         contentValues.put("TIPO", local.getTipo());
         contentValues.put("Num_Libras_Up",local.getNumLibraUp());
         contentValues.put("Num_Libras_Down",local.getNumLibraDown());
+        contentValues.put("Cor_Libras",(String) null);
         contentValues.put("Num_Rampas_Up",local.getNumRampaUp());
         contentValues.put("Num_Rampas_Down",local.getNumRampaDown());
+        contentValues.put("Cor_Rampas",(String) null);
         contentValues.put("Num_Interpretes_Up",local.getNumInterpretesUp());
         contentValues.put("Num_Interpretes_Down",local.getNumInterpretesDown());
+        contentValues.put("Cor_Interpretes",(String) null);
         contentValues.put("Tem_Mapa","0");
+
+
 
 
         conexao.insertOrThrow("LOCAL",null,contentValues);
@@ -176,10 +184,13 @@ public class LocalRepositorio {
                     local.setTipo(resultado.getString(resultado.getColumnIndexOrThrow("TIPO")));
                     local.setNumLibraUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Up")));
                     local.setNumLibraDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Down")));
+                    local.setCorLibras(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Libras")));
                     local.setNumRampaUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Up")));
                     local.setNumRampaDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Down")));
+                    local.setCorRampas(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Rampas")));
                     local.setNumInterpretesUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Up")));
                     local.setNumInterpretesDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Down")));
+                    local.setCorInterpretes(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Interpretes")));
                     local.setTemMapa(resultado.getString(resultado.getColumnIndexOrThrow("Tem_Mapa")));
 
                     return local;
@@ -213,10 +224,13 @@ public class LocalRepositorio {
                 local.setTipo(resultado.getString(resultado.getColumnIndexOrThrow("TIPO")));
                 local.setNumLibraUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Up")));
                 local.setNumLibraDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Down")));
+                local.setCorLibras(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Libras")));
                 local.setNumRampaUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Up")));
                 local.setNumRampaDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Down")));
+                local.setCorRampas(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Rampas")));
                 local.setNumInterpretesUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Up")));
                 local.setNumInterpretesDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Down")));
+                local.setCorInterpretes(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Interpretes")));
                 local.setTemMapa(resultado.getString(resultado.getColumnIndexOrThrow("Tem_Mapa")));
                 itens.add(local);
 
@@ -240,6 +254,7 @@ public class LocalRepositorio {
             resultado.moveToFirst();
 
             do{
+                System.out.println("");
                 System.out.print(resultado.getInt(resultado.getColumnIndexOrThrow("CODIGO")));
                 System.out.print(" ");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("NOME")));
@@ -250,13 +265,19 @@ public class LocalRepositorio {
                 System.out.println("");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Down")));
                 System.out.println("");
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Libras")));
+                System.out.println("");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Up")));
                 System.out.println("");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Down")));
                 System.out.println("");
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Rampas")));
+                System.out.println("");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Up")));
                 System.out.println("");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Down")));
+                System.out.println("");
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Interpretes")));
                 System.out.println("");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Tem_Mapa")));
                 System.out.println("");

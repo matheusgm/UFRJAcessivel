@@ -84,6 +84,7 @@
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_up_white_48"
                             android:tint="@color/colorGreen"
+                            android:tag="Green"
                             />
                         <TextView
                             android:id="@+id/numThumbsUpLibras"
@@ -105,7 +106,8 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_down_white_48"
-                            android:tint="@color/colorRed" />
+                            android:tint="@color/colorRed"
+                            android:tag="Red"/>
                         <TextView
                             android:id="@+id/numThumbsDownLibras"
                             android:layout_width="wrap_content"
@@ -157,7 +159,8 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_up_white_48"
-                            android:tint="@color/colorGreen" />
+                            android:tint="@color/colorGreen"
+                            android:tag="Green"/>
                         <TextView
                             android:id="@+id/numThumbsUpRampas"
                             android:layout_width="wrap_content"
@@ -178,7 +181,8 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_down_white_48"
-                            android:tint="@color/colorRed" />
+                            android:tint="@color/colorRed"
+                            android:tag="Red"/>
                         <TextView
                             android:id="@+id/numThumbsDownRampas"
                             android:layout_width="wrap_content"
@@ -228,7 +232,8 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_up_white_48"
-                            android:tint="@color/colorGreen" />
+                            android:tint="@color/colorGreen"
+                            android:tag="Green"/>
                         <TextView
                             android:id="@+id/numThumbsUpInterpretes"
                             android:layout_width="wrap_content"
@@ -249,7 +254,8 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_down_white_48"
-                            android:tint="@color/colorRed" />
+                            android:tint="@color/colorRed"
+                            android:tag="Red"/>
                         <TextView
                             android:id="@+id/numThumbsDownInterpretes"
                             android:layout_width="wrap_content"

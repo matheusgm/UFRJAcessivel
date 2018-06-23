@@ -68,13 +68,17 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                intent.putExtra("ID",locais.get(i).getId());
                 intent.putExtra("NOME",locais.get(i).getName());
                 intent.putExtra("NumLibraUp",locais.get(i).getNumLibraUp());
                 intent.putExtra("NumLibraDown",locais.get(i).getNumLibraDown());
+                intent.putExtra("COR_LIBRAS",locais.get(i).getCorLibras());
                 intent.putExtra("NumRampaUp",locais.get(i).getNumRampaUp());
                 intent.putExtra("NumRampaDown",locais.get(i).getNumRampaDown());
+                intent.putExtra("COR_RAMPAS",locais.get(i).getCorRampas());
                 intent.putExtra("NumInterpretesUp",locais.get(i).getNumInterpretesUp());
                 intent.putExtra("NumInterpretesDown",locais.get(i).getNumInterpretesDown());
+                intent.putExtra("COR_INTERPRETES",locais.get(i).getCorInterpretes());
                 startActivityForResult(intent,1);
             }
         });
