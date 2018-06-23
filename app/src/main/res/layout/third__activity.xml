@@ -1,6 +1,313 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBlue"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtNome"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="TextView" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgLibra1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/libra_white_48"
+                        android:tint="@color/colorBlack"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Libras"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp"
+                        >
+                        <ImageView
+                            android:id="@+id/imgThumbsUpLibras"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/thumb_up_white_48"
+                            android:tint="@color/colorGreen"
+                            />
+                        <TextView
+                            android:id="@+id/numThumbsUpLibras"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgThumbsDownLibras"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/thumb_down_white_48"
+                            android:tint="@color/colorRed" />
+                        <TextView
+                            android:id="@+id/numThumbsDownLibras"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"/>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgRampas1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/rampa_white_48"
+                        android:tint="@color/colorBlack"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Rampas"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:id="@+id/imgThumbsUpRampas"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/thumb_up_white_48"
+                            android:tint="@color/colorGreen" />
+                        <TextView
+                            android:id="@+id/numThumbsUpRampas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgThumbsDownRampas"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/thumb_down_white_48"
+                            android:tint="@color/colorRed" />
+                        <TextView
+                            android:id="@+id/numThumbsDownRampas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgInterpretes1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/interpretes_white_48"
+                        android:tint="@color/colorBlack"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Interpretes"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgThumbsUpInterpretes"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/thumb_up_white_48"
+                            android:tint="@color/colorGreen" />
+                        <TextView
+                            android:id="@+id/numThumbsUpInterpretes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgThumbsDownInterpretes"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/thumb_down_white_48"
+                            android:tint="@color/colorRed" />
+                        <TextView
+                            android:id="@+id/numThumbsDownInterpretes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgMapas1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/mapa_white_48"
+                        android:tint="@color/colorGrey"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Mapas"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/mapa_white_48"
+                android:tint="@color/colorGrey"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

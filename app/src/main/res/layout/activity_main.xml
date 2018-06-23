@@ -19,6 +19,7 @@
             android:textColor="@color/colorBlack"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:gravity="center"
             android:padding="50dp"
             android:drawableRight="@drawable/homepage_black_48"/>
 

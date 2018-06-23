@@ -1,17 +1,20 @@
 package com.example.matheus.ufrjacessivel;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.matheus.ufrjacessivel.DataBase.DadosOpenHelper;
 import com.example.matheus.ufrjacessivel.Local.Local;
@@ -19,7 +22,6 @@ import com.example.matheus.ufrjacessivel.Local.LocalListAdpter;
 import com.example.matheus.ufrjacessivel.Local.LocalRepositorio;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -33,7 +35,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     private SQLiteDatabase conexao;
     private LocalRepositorio localRepositorio;
 
-    private ArrayList<Local> itens;
+    private ArrayList<Local> locais;
 
     private String tipo;
     private String clauseMain;
@@ -62,6 +64,37 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
         visualizarLista(clauseMain);
 
+        lstViewItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                intent.putExtra("NOME",locais.get(i).getName());
+                intent.putExtra("NumLibraUp",locais.get(i).getNumLibraUp());
+                intent.putExtra("NumLibraDown",locais.get(i).getNumLibraDown());
+                intent.putExtra("NumRampaUp",locais.get(i).getNumRampaUp());
+                intent.putExtra("NumRampaDown",locais.get(i).getNumRampaDown());
+                intent.putExtra("NumInterpretesUp",locais.get(i).getNumInterpretesUp());
+                intent.putExtra("NumInterpretesDown",locais.get(i).getNumInterpretesDown());
+                startActivityForResult(intent,1);
+            }
+        });
+
+    }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode){
+            case 1:
+
+                visualizarLista(clauseMain);
+                break;
+        }
     }
 
     @Override
@@ -74,17 +107,17 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     private void visualizarLista(String S){
 
-        itens = localRepositorio.buscarTodos(S);
+        locais = localRepositorio.buscarTodos(S);
 
         if(lblAtual == lblLibra) {
-            localRepositorio.ordenarLibras(itens);
+            localRepositorio.ordenarLibras(locais);
         }else if(lblAtual == lblInterpretes) {
-            localRepositorio.ordenarInterpretes(itens);
+            localRepositorio.ordenarInterpretes(locais);
         }else if(lblAtual == lblRampas) {
-            localRepositorio.ordenarRampas(itens);
+            localRepositorio.ordenarRampas(locais);
         }
 
-        LocalListAdpter arrayAdapter = new LocalListAdpter(this,itens);
+        LocalListAdpter arrayAdapter = new LocalListAdpter(this,locais);
         lstViewItem.setAdapter(arrayAdapter);
 
         localRepositorio.verBanco();
