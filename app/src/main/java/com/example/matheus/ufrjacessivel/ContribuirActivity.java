@@ -107,6 +107,13 @@ public class ContribuirActivity extends AppCompatActivity implements View.OnClic
     }
 
     @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
+    }
+
+
+    @Override
     public void onClick(View v) {
         String tipo = spinner1.getSelectedItem().toString();
         if(!tipo.equals(primeiroItemSpinner)){

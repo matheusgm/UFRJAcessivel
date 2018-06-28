@@ -18,7 +18,8 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:textColor="#141617"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:fontFamily="@font/frederickathe_great_regular" />
 
     <LinearLayout
         android:layout_width="wrap_content"

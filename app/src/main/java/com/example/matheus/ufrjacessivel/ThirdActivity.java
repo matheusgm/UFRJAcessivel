@@ -41,14 +41,13 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.third__activity);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-        txtNome = findViewById(R.id.txtNome);
 
         String nome = getIntent().getStringExtra("NOME");
-        txtNome.setText(nome);
         id = getIntent().getIntExtra("ID",-1);
+
+        getSupportActionBar().setTitle(nome);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         setaValoresIniciais();
 
@@ -131,7 +130,7 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
             if(imgUp.getTag().equals("LightGreen")){
                 val1 = Integer.toString(Integer.parseInt(txtUp.getText().toString())-1);
                 txtUp.setText(val1);
-                imgUp.setColorFilter(getResources().getColor(R.color.colorGreen));
+                imgUp.setColorFilter(getResources().getColor(R.color.colorGreen200));
                 imgUp.setTag("Green");
 
                 contentValues.put(nomeUp,val1);
@@ -141,7 +140,7 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
                 imgUp.setTag("LightGreen");
                 val1 = Integer.toString(Integer.parseInt(txtUp.getText().toString())+1);
                 txtUp.setText(val1);
-                imgDown.setColorFilter(getResources().getColor(R.color.colorRed));
+                imgDown.setColorFilter(getResources().getColor(R.color.colorRed200));
                 imgDown.setTag("Red");
                 val2 = Integer.toString(Integer.parseInt(txtDown.getText().toString())-1);
                 txtDown.setText(val2);
@@ -162,7 +161,7 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
             if(imgDown.getTag().equals("LightRed")){
                 val2 = Integer.toString(Integer.parseInt(txtDown.getText().toString())-1);
                 txtDown.setText(val2);
-                imgDown.setColorFilter(getResources().getColor(R.color.colorRed));
+                imgDown.setColorFilter(getResources().getColor(R.color.colorRed200));
                 imgDown.setTag("Red");
 
                 contentValues.put(nomeDown,val2);
@@ -172,7 +171,7 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
                 imgDown.setTag("LightRed");
                 val2 = Integer.toString(Integer.parseInt(txtDown.getText().toString())+1);
                 txtDown.setText(val2);
-                imgUp.setColorFilter(getResources().getColor(R.color.colorGreen));
+                imgUp.setColorFilter(getResources().getColor(R.color.colorGreen200));
                 imgUp.setTag("Green");
                 val1 = Integer.toString(Integer.parseInt(txtUp.getText().toString())-1);
                 txtUp.setText(val1);

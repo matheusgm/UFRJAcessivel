@@ -5,8 +5,11 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,6 +24,7 @@ import com.example.matheus.ufrjacessivel.Local.Local;
 import com.example.matheus.ufrjacessivel.Local.LocalListAdpter;
 import com.example.matheus.ufrjacessivel.Local.LocalRepositorio;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
@@ -162,8 +166,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             clearLabel(lblInterpretes);
             clearLabel(lblRampas);
 
-            lbl.setTypeface(Typeface.DEFAULT_BOLD);
-            lbl.setTextSize(20);
+            lbl.setTypeface(ResourcesCompat.getFont(this,R.font.vast_shadow_regular));
+            //lbl.setTextSize(20);
+            lbl.setBackground(ContextCompat.getDrawable(this,R.drawable.border));
 
         }
 
@@ -172,8 +177,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void clearLabel(TextView lbl){
-        lbl.setTypeface(Typeface.DEFAULT);
+        lbl.setTypeface(ResourcesCompat.getFont(this,R.font.vast_shadow_regular));
         lbl.setTextSize(15);
+        lbl.setBackground(null);
     }
 
 

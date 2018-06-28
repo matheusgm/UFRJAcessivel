@@ -66,11 +66,11 @@ public class LocalListAdpter extends BaseAdapter {
     private void setaCores(ImageView image, String up, String down){
 
         if(Integer.parseInt(up) > Integer.parseInt(down)){
-            image.setColorFilter(context.getResources().getColor(R.color.colorGreen));
+            image.setColorFilter(context.getResources().getColor(R.color.colorGreen200));
         }else if(Integer.parseInt(up) < Integer.parseInt(down)){
-            image.setColorFilter(context.getResources().getColor(R.color.colorRed));
+            image.setColorFilter(context.getResources().getColor(R.color.colorRed200));
         }else{
-            image.setColorFilter(context.getResources().getColor(R.color.colorBlack));
+            image.setColorFilter(context.getResources().getColor(R.color.colorBlack200));
         }
 
       /*4 4     6 5   6 5

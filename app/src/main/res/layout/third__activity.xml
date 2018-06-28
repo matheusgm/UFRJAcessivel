@@ -12,31 +12,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorBlue"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/txtNome"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="30dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="TextView" />
-                </LinearLayout>
-
-            </LinearLayout>
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -57,7 +34,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/libra_white_48"
-                        android:tint="@color/colorBlack"
+                        android:tint="@color/colorBlack200"
                         android:layout_gravity="center"/>
 
                     <TextView
@@ -70,7 +47,8 @@
                         android:paddingRight="20dp"
                         android:text="Libras"
                         android:textColor="@color/colorBlack"
-                        android:textSize="15sp" />
+                        android:textSize="17sp"
+                        android:fontFamily="@font/crimson_regular"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -83,7 +61,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_up_white_48"
-                            android:tint="@color/colorGreen"
+                            android:tint="@color/colorGreen200"
                             android:tag="Green"
                             />
                         <TextView
@@ -106,7 +84,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_down_white_48"
-                            android:tint="@color/colorRed"
+                            android:tint="@color/colorRed200"
                             android:tag="Red"/>
                         <TextView
                             android:id="@+id/numThumbsDownLibras"
@@ -134,7 +112,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/rampa_white_48"
-                        android:tint="@color/colorBlack"
+                        android:tint="@color/colorBlack200"
                         android:layout_gravity="center"/>
 
                     <TextView
@@ -147,7 +125,8 @@
                         android:paddingRight="20dp"
                         android:text="Rampas"
                         android:textColor="@color/colorBlack"
-                        android:textSize="15sp" />
+                        android:textSize="17sp"
+                        android:fontFamily="@font/crimson_regular"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -159,7 +138,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_up_white_48"
-                            android:tint="@color/colorGreen"
+                            android:tint="@color/colorGreen200"
                             android:tag="Green"/>
                         <TextView
                             android:id="@+id/numThumbsUpRampas"
@@ -181,7 +160,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_down_white_48"
-                            android:tint="@color/colorRed"
+                            android:tint="@color/colorRed200"
                             android:tag="Red"/>
                         <TextView
                             android:id="@+id/numThumbsDownRampas"
@@ -206,7 +185,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/interpretes_white_48"
-                        android:tint="@color/colorBlack"
+                        android:tint="@color/colorBlack200"
                         android:layout_gravity="center"/>
 
                     <TextView
@@ -219,7 +198,8 @@
                         android:paddingRight="20dp"
                         android:text="Interpretes"
                         android:textColor="@color/colorBlack"
-                        android:textSize="15sp" />
+                        android:textSize="17sp"
+                        android:fontFamily="@font/crimson_regular"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -232,7 +212,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_up_white_48"
-                            android:tint="@color/colorGreen"
+                            android:tint="@color/colorGreen200"
                             android:tag="Green"/>
                         <TextView
                             android:id="@+id/numThumbsUpInterpretes"
@@ -254,7 +234,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_down_white_48"
-                            android:tint="@color/colorRed"
+                            android:tint="@color/colorRed200"
                             android:tag="Red"/>
                         <TextView
                             android:id="@+id/numThumbsDownInterpretes"
@@ -298,7 +278,8 @@
                         android:paddingRight="20dp"
                         android:text="Mapas"
                         android:textColor="@color/colorBlack"
-                        android:textSize="15sp" />
+                        android:textSize="17sp"
+                        android:fontFamily="@font/crimson_regular"/>
 
                 </LinearLayout>
 
