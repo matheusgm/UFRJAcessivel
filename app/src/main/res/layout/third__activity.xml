@@ -33,7 +33,7 @@
                         android:id="@+id/imgAudicao1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/audicao_white_48"
+                        android:src="@drawable/audicao2_white_48"
                         android:tint="@color/colorBlack200"
                         android:layout_gravity="center"/>
 
@@ -45,7 +45,7 @@
                         android:layout_weight="5"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
-                        android:text="Audicao"
+                        android:text="Audição"
                         android:textColor="@color/colorBlack"
                         android:textSize="17sp"
                         android:fontFamily="@font/crimson_regular"/>
@@ -184,7 +184,7 @@
                         android:id="@+id/imgVisao1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/visao_white_48"
+                        android:src="@drawable/visao2_white_48"
                         android:tint="@color/colorBlack200"
                         android:layout_gravity="center"/>
 
@@ -196,7 +196,7 @@
                         android:layout_weight="5"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
-                        android:text="Visao"
+                        android:text="Visão"
                         android:textColor="@color/colorBlack"
                         android:textSize="17sp"
                         android:fontFamily="@font/crimson_regular"/>

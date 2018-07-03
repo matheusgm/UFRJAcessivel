@@ -34,7 +34,7 @@
             android:id="@+id/imageAudicao"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/audicao_white_48"
+            android:src="@drawable/audicao2_white_48"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             />
@@ -50,7 +50,7 @@
             android:id="@+id/imageVisao"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/visao_white_48"
+            android:src="@drawable/visao2_white_48"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             />
