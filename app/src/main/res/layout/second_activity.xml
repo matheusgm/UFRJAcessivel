@@ -15,30 +15,30 @@
         android:layout_marginRight="10dp">
 
         <TextView
-            android:id="@+id/lblLibra"
+            android:id="@+id/lblAudicao"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Libra"
+            android:text="Audicao"
             android:textColor="@color/colorBlack"
             android:textSize="15sp"
             android:textAlignment="center"
             android:layout_weight="1"
             android:fontFamily="@font/vast_shadow_regular"/>
         <TextView
-            android:id="@+id/lblRampas"
+            android:id="@+id/lblMobilidade"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Rampas"
+            android:text="Mobilidade"
             android:textSize="15sp"
             android:textColor="@color/colorBlack"
             android:textAlignment="center"
             android:layout_weight="1"
             android:fontFamily="@font/vast_shadow_regular"/>
         <TextView
-            android:id="@+id/lblInterpretes"
+            android:id="@+id/lblVisao"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Interpretes"
+            android:text="Visao"
             android:textSize="15sp"
             android:textColor="@color/colorBlack"
             android:textAlignment="center"

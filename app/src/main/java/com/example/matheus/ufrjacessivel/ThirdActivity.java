@@ -19,14 +19,14 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
 
     private TextView txtNome;
 
-    private TextView lblLibraUp;
-    private TextView lblLibraDown;
-    private TextView lblRampaUp;
-    private TextView lblRampaDown;
-    private TextView lblInterpretesUp;
-    private TextView lblInterpretesDown;
+    private TextView lblAudicaoUp;
+    private TextView lblAudicaoDown;
+    private TextView lblMobilidadeUp;
+    private TextView lblMobilidadeDown;
+    private TextView lblVisaoUp;
+    private TextView lblVisaoDown;
 
-    private ImageView imgLibraUp, imgLibraDown, imgRampasUp, imgRampasDown, imgInterpretesUp, imgInterpretesDown;
+    private ImageView imgAudicaoUp, imgAudicaoDown, imgMobilidadeUp, imgMobilidadeDown, imgVisaoUp, imgVisaoDown;
 
     private DadosOpenHelper dadosOpenHelper;
     private SQLiteDatabase conexao;
@@ -51,13 +51,13 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
 
         setaValoresIniciais();
 
-        String corLibras = getIntent().getStringExtra("COR_LIBRAS");
-        String corRampas = getIntent().getStringExtra("COR_RAMPAS");
-        String corInterpretes = getIntent().getStringExtra("COR_INTERPRETES");
+        String corAudicao = getIntent().getStringExtra("COR_Audicao");
+        String corMobilidade = getIntent().getStringExtra("COR_Mobilidade");
+        String corVisao = getIntent().getStringExtra("COR_Visao");
 
-        setaCoresThumbs(corLibras, imgLibraUp, imgLibraDown);
-        setaCoresThumbs(corRampas, imgRampasUp, imgRampasDown);
-        setaCoresThumbs(corInterpretes, imgInterpretesUp, imgInterpretesDown);
+        setaCoresThumbs(corAudicao, imgAudicaoUp, imgAudicaoDown);
+        setaCoresThumbs(corMobilidade, imgMobilidadeUp, imgMobilidadeDown);
+        setaCoresThumbs(corVisao, imgVisaoUp, imgVisaoDown);
 
         criarConexao();
 
@@ -79,40 +79,40 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void setaValoresIniciais(){
-        lblLibraUp = findViewById(R.id.numThumbsUpLibras);
-        lblLibraDown = findViewById(R.id.numThumbsDownLibras);
-        lblRampaUp = findViewById(R.id.numThumbsUpRampas);
-        lblRampaDown = findViewById(R.id.numThumbsDownRampas);
-        lblInterpretesUp = findViewById(R.id.numThumbsUpInterpretes);
-        lblInterpretesDown = findViewById(R.id.numThumbsDownInterpretes);
+        lblAudicaoUp = findViewById(R.id.numThumbsUpAudicao);
+        lblAudicaoDown = findViewById(R.id.numThumbsDownAudicao);
+        lblMobilidadeUp = findViewById(R.id.numThumbsUpMobilidade);
+        lblMobilidadeDown = findViewById(R.id.numThumbsDownMobilidade);
+        lblVisaoUp = findViewById(R.id.numThumbsUpVisao);
+        lblVisaoDown = findViewById(R.id.numThumbsDownVisao);
 
-        imgLibraUp = findViewById(R.id.imgThumbsUpLibras);
-        imgLibraDown = findViewById(R.id.imgThumbsDownLibras);
-        imgRampasUp = findViewById(R.id.imgThumbsUpRampas);
-        imgRampasDown = findViewById(R.id.imgThumbsDownRampas);
-        imgInterpretesUp = findViewById(R.id.imgThumbsUpInterpretes);
-        imgInterpretesDown = findViewById(R.id.imgThumbsDownInterpretes);
+        imgAudicaoUp = findViewById(R.id.imgThumbsUpAudicao);
+        imgAudicaoDown = findViewById(R.id.imgThumbsDownAudicao);
+        imgMobilidadeUp = findViewById(R.id.imgThumbsUpMobilidade);
+        imgMobilidadeDown = findViewById(R.id.imgThumbsDownMobilidade);
+        imgVisaoUp = findViewById(R.id.imgThumbsUpVisao);
+        imgVisaoDown = findViewById(R.id.imgThumbsDownVisao);
 
-        String NumLibraUp = getIntent().getStringExtra("NumLibraUp");
-        String NumLibraDown = getIntent().getStringExtra("NumLibraDown");
-        String NumRampaUp = getIntent().getStringExtra("NumRampaUp");
-        String NumRampaDown = getIntent().getStringExtra("NumRampaDown");
-        String NumInterpretesUp = getIntent().getStringExtra("NumInterpretesUp");
-        String NumInterpretesDown = getIntent().getStringExtra("NumInterpretesDown");
+        String NumAudicaoUp = getIntent().getStringExtra("NumAudicaoUp");
+        String NumAudicaoDown = getIntent().getStringExtra("NumAudicaoDown");
+        String NumMobilidadeUp = getIntent().getStringExtra("NumMobilidadeUp");
+        String NumMobilidadeDown = getIntent().getStringExtra("NumMobilidadeDown");
+        String NumVisaoUp = getIntent().getStringExtra("NumVisaoUp");
+        String NumVisaoDown = getIntent().getStringExtra("NumVisaoDown");
 
-        lblLibraUp.setText(NumLibraUp);
-        lblLibraDown.setText(NumLibraDown);
-        lblRampaUp.setText(NumRampaUp);
-        lblRampaDown.setText(NumRampaDown);
-        lblInterpretesUp.setText(NumInterpretesUp);
-        lblInterpretesDown.setText(NumInterpretesDown);
+        lblAudicaoUp.setText(NumAudicaoUp);
+        lblAudicaoDown.setText(NumAudicaoDown);
+        lblMobilidadeUp.setText(NumMobilidadeUp);
+        lblMobilidadeDown.setText(NumMobilidadeDown);
+        lblVisaoUp.setText(NumVisaoUp);
+        lblVisaoDown.setText(NumVisaoDown);
 
-        imgLibraUp.setOnClickListener(this);
-        imgLibraDown.setOnClickListener(this);
-        imgRampasUp.setOnClickListener(this);
-        imgRampasDown.setOnClickListener(this);
-        imgInterpretesUp.setOnClickListener(this);
-        imgInterpretesDown.setOnClickListener(this);
+        imgAudicaoUp.setOnClickListener(this);
+        imgAudicaoDown.setOnClickListener(this);
+        imgMobilidadeUp.setOnClickListener(this);
+        imgMobilidadeDown.setOnClickListener(this);
+        imgVisaoUp.setOnClickListener(this);
+        imgVisaoDown.setOnClickListener(this);
     }
 
     @Override
@@ -197,12 +197,12 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         ImageView img = findViewById(v.getId());
-        if(img == imgLibraUp || img == imgLibraDown){
-            ativaThumb(img,imgLibraUp,imgLibraDown,lblLibraUp,lblLibraDown,"Num_Libras_Up","Num_Libras_Down","Cor_Libras");
-        }else if(img == imgRampasUp || img == imgRampasDown){
-            ativaThumb(img,imgRampasUp,imgRampasDown,lblRampaUp,lblRampaDown,"Num_Rampas_Up","Num_Rampas_Down","Cor_Rampas");
-        }else if(img == imgInterpretesUp || img == imgInterpretesDown){
-            ativaThumb(img,imgInterpretesUp,imgInterpretesDown,lblInterpretesUp,lblInterpretesDown,"Num_Interpretes_Up","Num_Interpretes_Down","Cor_Interpretes");
+        if(img == imgAudicaoUp || img == imgAudicaoDown){
+            ativaThumb(img,imgAudicaoUp,imgAudicaoDown,lblAudicaoUp,lblAudicaoDown,"Num_Audicao_Up","Num_Audicao_Down","Cor_Audicao");
+        }else if(img == imgMobilidadeUp || img == imgMobilidadeDown){
+            ativaThumb(img,imgMobilidadeUp,imgMobilidadeDown,lblMobilidadeUp,lblMobilidadeDown,"Num_Mobilidade_Up","Num_Mobilidade_Down","Cor_Mobilidade");
+        }else if(img == imgVisaoUp || img == imgVisaoDown){
+            ativaThumb(img,imgVisaoUp,imgVisaoDown,lblVisaoUp,lblVisaoDown,"Num_Visao_Up","Num_Visao_Down","Cor_Visao");
         }
 
     }

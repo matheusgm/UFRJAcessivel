@@ -30,10 +30,10 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/imgLibra1"
+                        android:id="@+id/imgAudicao1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/libra_white_48"
+                        android:src="@drawable/audicao_white_48"
                         android:tint="@color/colorBlack200"
                         android:layout_gravity="center"/>
 
@@ -45,7 +45,7 @@
                         android:layout_weight="5"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
-                        android:text="Libras"
+                        android:text="Audicao"
                         android:textColor="@color/colorBlack"
                         android:textSize="17sp"
                         android:fontFamily="@font/crimson_regular"/>
@@ -57,7 +57,7 @@
                         android:layout_marginRight="10dp"
                         >
                         <ImageView
-                            android:id="@+id/imgThumbsUpLibras"
+                            android:id="@+id/imgThumbsUpAudicao"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_up_white_48"
@@ -65,7 +65,7 @@
                             android:tag="Green"
                             />
                         <TextView
-                            android:id="@+id/numThumbsUpLibras"
+                            android:id="@+id/numThumbsUpAudicao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -80,14 +80,14 @@
                         android:layout_marginLeft="10dp">
 
                         <ImageView
-                            android:id="@+id/imgThumbsDownLibras"
+                            android:id="@+id/imgThumbsDownAudicao"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_down_white_48"
                             android:tint="@color/colorRed200"
                             android:tag="Red"/>
                         <TextView
-                            android:id="@+id/numThumbsDownLibras"
+                            android:id="@+id/numThumbsDownAudicao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -108,10 +108,10 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/imgRampas1"
+                        android:id="@+id/imgMobilidade1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/rampa_white_48"
+                        android:src="@drawable/mobilidade_white_48"
                         android:tint="@color/colorBlack200"
                         android:layout_gravity="center"/>
 
@@ -123,7 +123,7 @@
                         android:layout_weight="5"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
-                        android:text="Rampas"
+                        android:text="Mobilidade"
                         android:textColor="@color/colorBlack"
                         android:textSize="17sp"
                         android:fontFamily="@font/crimson_regular"/>
@@ -134,14 +134,14 @@
                         android:orientation="vertical"
                         android:layout_marginRight="10dp">
                         <ImageView
-                            android:id="@+id/imgThumbsUpRampas"
+                            android:id="@+id/imgThumbsUpMobilidade"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_up_white_48"
                             android:tint="@color/colorGreen200"
                             android:tag="Green"/>
                         <TextView
-                            android:id="@+id/numThumbsUpRampas"
+                            android:id="@+id/numThumbsUpMobilidade"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -156,14 +156,14 @@
                         android:layout_marginLeft="10dp">
 
                         <ImageView
-                            android:id="@+id/imgThumbsDownRampas"
+                            android:id="@+id/imgThumbsDownMobilidade"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_down_white_48"
                             android:tint="@color/colorRed200"
                             android:tag="Red"/>
                         <TextView
-                            android:id="@+id/numThumbsDownRampas"
+                            android:id="@+id/numThumbsDownMobilidade"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -181,10 +181,10 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/imgInterpretes1"
+                        android:id="@+id/imgVisao1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/interpretes_white_48"
+                        android:src="@drawable/visao_white_48"
                         android:tint="@color/colorBlack200"
                         android:layout_gravity="center"/>
 
@@ -196,7 +196,7 @@
                         android:layout_weight="5"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
-                        android:text="Interpretes"
+                        android:text="Visao"
                         android:textColor="@color/colorBlack"
                         android:textSize="17sp"
                         android:fontFamily="@font/crimson_regular"/>
@@ -208,14 +208,14 @@
                         android:layout_marginRight="10dp">
 
                         <ImageView
-                            android:id="@+id/imgThumbsUpInterpretes"
+                            android:id="@+id/imgThumbsUpVisao"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_up_white_48"
                             android:tint="@color/colorGreen200"
                             android:tag="Green"/>
                         <TextView
-                            android:id="@+id/numThumbsUpInterpretes"
+                            android:id="@+id/numThumbsUpVisao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -230,14 +230,14 @@
                         android:layout_marginLeft="10dp">
 
                         <ImageView
-                            android:id="@+id/imgThumbsDownInterpretes"
+                            android:id="@+id/imgThumbsDownVisao"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/thumb_down_white_48"
                             android:tint="@color/colorRed200"
                             android:tag="Red"/>
                         <TextView
-                            android:id="@+id/numThumbsDownInterpretes"
+                            android:id="@+id/numThumbsDownVisao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

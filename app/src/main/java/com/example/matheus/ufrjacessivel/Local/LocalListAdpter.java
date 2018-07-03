@@ -42,19 +42,19 @@ public class LocalListAdpter extends BaseAdapter {
         View v = View.inflate(context,R.layout.item_list,null);
         TextView name = v.findViewById(R.id.lbl1);
 
-        ImageView imageLibra = v.findViewById(R.id.imageLibra);
-        ImageView imageRampa = v.findViewById(R.id.imageRampa);
-        ImageView imageInterprete = v.findViewById(R.id.imageInterpretes);
+        ImageView imageAudicao = v.findViewById(R.id.imageAudicao);
+        ImageView imageMobilidade = v.findViewById(R.id.imageMobilidade);
+        ImageView imageVisao = v.findViewById(R.id.imageVisao);
         ImageView imageMapa = v.findViewById(R.id.imageMap);
 
-        /*imageLibra.setColorFilter(context.getResources().getColor(R.color.colorGreen));
-        imageRampa.setColorFilter(context.getResources().getColor(R.color.colorRed));
-        imageInterprete.setColorFilter(context.getResources().getColor(R.color.colorBlack));*/
+        /*imageAudicao.setColorFilter(context.getResources().getColor(R.color.colorGreen));
+        imageMobilidade.setColorFilter(context.getResources().getColor(R.color.colorRed));
+        imageVisao.setColorFilter(context.getResources().getColor(R.color.colorBlack));*/
         imageMapa.setColorFilter(context.getResources().getColor(R.color.colorGrey));
 
-        setaCores(imageLibra,localList.get(position).getNumLibraUp(),localList.get(position).getNumLibraDown());
-        setaCores(imageRampa,localList.get(position).getNumRampaUp(),localList.get(position).getNumRampaDown());
-        setaCores(imageInterprete,localList.get(position).getNumInterpretesUp(),localList.get(position).getNumInterpretesDown());
+        setaCores(imageAudicao,localList.get(position).getNumAudicaoUp(),localList.get(position).getNumAudicaoDown());
+        setaCores(imageMobilidade,localList.get(position).getNumMobilidadeUp(),localList.get(position).getNumMobilidadeDown());
+        setaCores(imageVisao,localList.get(position).getNumVisaoUp(),localList.get(position).getNumVisaoDown());
 
         name.setText(localList.get(position).getName());
 

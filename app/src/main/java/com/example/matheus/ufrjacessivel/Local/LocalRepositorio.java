@@ -23,15 +23,15 @@ public class LocalRepositorio {
         ContentValues contentValues = new ContentValues();
         contentValues.put("NOME", local.getName());
         contentValues.put("TIPO", local.getTipo());
-        contentValues.put("Num_Libras_Up","0");
-        contentValues.put("Num_Libras_Down","0");
-        contentValues.put("Cor_Libras", (String) null);
-        contentValues.put("Num_Rampas_Up","0");
-        contentValues.put("Num_Rampas_Down","0");
-        contentValues.put("Cor_Rampas", (String) null);
-        contentValues.put("Num_Interpretes_Up","0");
-        contentValues.put("Num_Interpretes_Down","0");
-        contentValues.put("Cor_Interpretes", (String) null);
+        contentValues.put("Num_Audicao_Up","0");
+        contentValues.put("Num_Audicao_Down","0");
+        contentValues.put("Cor_Audicao", (String) null);
+        contentValues.put("Num_Mobilidade_Up","0");
+        contentValues.put("Num_Mobilidade_Down","0");
+        contentValues.put("Cor_Mobilidade", (String) null);
+        contentValues.put("Num_Visao_Up","0");
+        contentValues.put("Num_Visao_Down","0");
+        contentValues.put("Cor_Visao", (String) null);
         contentValues.put("Tem_Mapa","0");
 
 
@@ -44,15 +44,15 @@ public class LocalRepositorio {
         ContentValues contentValues = new ContentValues();
         contentValues.put("NOME", local.getName());
         contentValues.put("TIPO", local.getTipo());
-        contentValues.put("Num_Libras_Up",local.getNumLibraUp());
-        contentValues.put("Num_Libras_Down",local.getNumLibraDown());
-        contentValues.put("Cor_Libras",(String) null);
-        contentValues.put("Num_Rampas_Up",local.getNumRampaUp());
-        contentValues.put("Num_Rampas_Down",local.getNumRampaDown());
-        contentValues.put("Cor_Rampas",(String) null);
-        contentValues.put("Num_Interpretes_Up",local.getNumInterpretesUp());
-        contentValues.put("Num_Interpretes_Down",local.getNumInterpretesDown());
-        contentValues.put("Cor_Interpretes",(String) null);
+        contentValues.put("Num_Audicao_Up",local.getNumAudicaoUp());
+        contentValues.put("Num_Audicao_Down",local.getNumAudicaoDown());
+        contentValues.put("Cor_Audicao",(String) null);
+        contentValues.put("Num_Mobilidade_Up",local.getNumMobilidadeUp());
+        contentValues.put("Num_Mobilidade_Down",local.getNumMobilidadeDown());
+        contentValues.put("Cor_Mobilidade",(String) null);
+        contentValues.put("Num_Visao_Up",local.getNumVisaoUp());
+        contentValues.put("Num_Visao_Down",local.getNumVisaoDown());
+        contentValues.put("Cor_Visao",(String) null);
         contentValues.put("Tem_Mapa","0");
 
 
@@ -66,7 +66,7 @@ public class LocalRepositorio {
         conexao.update("LOCAL", values, "CODIGO = "+id, null);
     }
 
-    public void ordenarLibras(ArrayList<Local> local){
+    public void ordenarAudicao(ArrayList<Local> local){
 
         int ini;
         int fim;
@@ -74,14 +74,14 @@ public class LocalRepositorio {
             int troca = 0;
             for(ini = 0; ini < fim; ini++){
 
-                if( (Integer.parseInt(local.get(ini).getNumLibraUp()) - Integer.parseInt(local.get(ini).getNumLibraDown())) < (Integer.parseInt(local.get(ini + 1).getNumLibraUp()) - Integer.parseInt(local.get(ini + 1).getNumLibraDown())) ){
+                if( (Integer.parseInt(local.get(ini).getNumAudicaoUp()) - Integer.parseInt(local.get(ini).getNumAudicaoDown())) < (Integer.parseInt(local.get(ini + 1).getNumAudicaoUp()) - Integer.parseInt(local.get(ini + 1).getNumAudicaoDown())) ){
                     Local temp = local.get(ini);
                     local.set(ini, local.get(ini + 1));
                     local.set(ini + 1, temp);
                     troca++;
-                }else if( (Integer.parseInt(local.get(ini).getNumLibraUp()) - Integer.parseInt(local.get(ini).getNumLibraDown())) == (Integer.parseInt(local.get(ini + 1).getNumLibraUp()) - Integer.parseInt(local.get(ini + 1).getNumLibraDown())) ){
+                }else if( (Integer.parseInt(local.get(ini).getNumAudicaoUp()) - Integer.parseInt(local.get(ini).getNumAudicaoDown())) == (Integer.parseInt(local.get(ini + 1).getNumAudicaoUp()) - Integer.parseInt(local.get(ini + 1).getNumAudicaoDown())) ){
 
-                    if( Integer.parseInt(local.get(ini).getNumLibraUp()) < Integer.parseInt(local.get(ini + 1).getNumLibraDown()) ){
+                    if( Integer.parseInt(local.get(ini).getNumAudicaoUp()) < Integer.parseInt(local.get(ini + 1).getNumAudicaoDown()) ){
                         Local temp = local.get(ini);
                         local.set(ini, local.get(ini + 1));
                         local.set(ini + 1, temp);
@@ -96,7 +96,7 @@ public class LocalRepositorio {
         }
     }
 
-    public void ordenarInterpretes(ArrayList<Local> local){
+    public void ordenarVisao(ArrayList<Local> local){
 
         int ini;
         int fim;
@@ -104,14 +104,14 @@ public class LocalRepositorio {
             int troca = 0;
             for(ini = 0; ini < fim; ini++){
 
-                if( (Integer.parseInt(local.get(ini).getNumInterpretesUp()) - Integer.parseInt(local.get(ini).getNumInterpretesDown())) < (Integer.parseInt(local.get(ini + 1).getNumInterpretesUp()) - Integer.parseInt(local.get(ini + 1).getNumInterpretesDown())) ){
+                if( (Integer.parseInt(local.get(ini).getNumVisaoUp()) - Integer.parseInt(local.get(ini).getNumVisaoDown())) < (Integer.parseInt(local.get(ini + 1).getNumVisaoUp()) - Integer.parseInt(local.get(ini + 1).getNumVisaoDown())) ){
                     Local temp = local.get(ini);
                     local.set(ini, local.get(ini + 1));
                     local.set(ini + 1, temp);
                     troca++;
-                }else if( (Integer.parseInt(local.get(ini).getNumInterpretesUp()) - Integer.parseInt(local.get(ini).getNumInterpretesDown())) == (Integer.parseInt(local.get(ini + 1).getNumInterpretesUp()) - Integer.parseInt(local.get(ini + 1).getNumInterpretesDown())) ){
+                }else if( (Integer.parseInt(local.get(ini).getNumVisaoUp()) - Integer.parseInt(local.get(ini).getNumVisaoDown())) == (Integer.parseInt(local.get(ini + 1).getNumVisaoUp()) - Integer.parseInt(local.get(ini + 1).getNumVisaoDown())) ){
 
-                    if( Integer.parseInt(local.get(ini).getNumInterpretesUp()) < Integer.parseInt(local.get(ini + 1).getNumInterpretesDown()) ){
+                    if( Integer.parseInt(local.get(ini).getNumVisaoUp()) < Integer.parseInt(local.get(ini + 1).getNumVisaoDown()) ){
                         Local temp = local.get(ini);
                         local.set(ini, local.get(ini + 1));
                         local.set(ini + 1, temp);
@@ -126,7 +126,7 @@ public class LocalRepositorio {
         }
     }
 
-    public void ordenarRampas(ArrayList<Local> local){
+    public void ordenarMobilidade(ArrayList<Local> local){
 
         int ini;
         int fim;
@@ -134,14 +134,14 @@ public class LocalRepositorio {
             int troca = 0;
             for(ini = 0; ini < fim; ini++){
 
-                if( (Integer.parseInt(local.get(ini).getNumRampaUp()) - Integer.parseInt(local.get(ini).getNumRampaDown())) < (Integer.parseInt(local.get(ini + 1).getNumRampaUp()) - Integer.parseInt(local.get(ini + 1).getNumRampaDown())) ){
+                if( (Integer.parseInt(local.get(ini).getNumMobilidadeUp()) - Integer.parseInt(local.get(ini).getNumMobilidadeDown())) < (Integer.parseInt(local.get(ini + 1).getNumMobilidadeUp()) - Integer.parseInt(local.get(ini + 1).getNumMobilidadeDown())) ){
                     Local temp = local.get(ini);
                     local.set(ini, local.get(ini + 1));
                     local.set(ini + 1, temp);
                     troca++;
-                }else if( (Integer.parseInt(local.get(ini).getNumRampaUp()) - Integer.parseInt(local.get(ini).getNumRampaDown())) == (Integer.parseInt(local.get(ini + 1).getNumRampaUp()) - Integer.parseInt(local.get(ini + 1).getNumRampaDown())) ){
+                }else if( (Integer.parseInt(local.get(ini).getNumMobilidadeUp()) - Integer.parseInt(local.get(ini).getNumMobilidadeDown())) == (Integer.parseInt(local.get(ini + 1).getNumMobilidadeUp()) - Integer.parseInt(local.get(ini + 1).getNumMobilidadeDown())) ){
 
-                    if( Integer.parseInt(local.get(ini).getNumRampaUp()) < Integer.parseInt(local.get(ini + 1).getNumRampaDown()) ){
+                    if( Integer.parseInt(local.get(ini).getNumMobilidadeUp()) < Integer.parseInt(local.get(ini + 1).getNumMobilidadeDown()) ){
                         Local temp = local.get(ini);
                         local.set(ini, local.get(ini + 1));
                         local.set(ini + 1, temp);
@@ -182,15 +182,15 @@ public class LocalRepositorio {
                     local.setId(resultado.getInt(resultado.getColumnIndexOrThrow("CODIGO")));
                     local.setName(resultado.getString(resultado.getColumnIndexOrThrow("NOME")));
                     local.setTipo(resultado.getString(resultado.getColumnIndexOrThrow("TIPO")));
-                    local.setNumLibraUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Up")));
-                    local.setNumLibraDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Down")));
-                    local.setCorLibras(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Libras")));
-                    local.setNumRampaUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Up")));
-                    local.setNumRampaDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Down")));
-                    local.setCorRampas(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Rampas")));
-                    local.setNumInterpretesUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Up")));
-                    local.setNumInterpretesDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Down")));
-                    local.setCorInterpretes(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Interpretes")));
+                    local.setNumAudicaoUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Audicao_Up")));
+                    local.setNumAudicaoDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Audicao_Down")));
+                    local.setCorAudicao(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Audicao")));
+                    local.setNumMobilidadeUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Mobilidade_Up")));
+                    local.setNumMobilidadeDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Mobilidade_Down")));
+                    local.setCorMobilidade(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Mobilidade")));
+                    local.setNumVisaoUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Visao_Up")));
+                    local.setNumVisaoDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Visao_Down")));
+                    local.setCorVisao(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Visao")));
                     local.setTemMapa(resultado.getString(resultado.getColumnIndexOrThrow("Tem_Mapa")));
 
                     return local;
@@ -222,15 +222,15 @@ public class LocalRepositorio {
                 local.setId(resultado.getInt(resultado.getColumnIndexOrThrow("CODIGO")));
                 local.setName(resultado.getString(resultado.getColumnIndexOrThrow("NOME")));
                 local.setTipo(resultado.getString(resultado.getColumnIndexOrThrow("TIPO")));
-                local.setNumLibraUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Up")));
-                local.setNumLibraDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Down")));
-                local.setCorLibras(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Libras")));
-                local.setNumRampaUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Up")));
-                local.setNumRampaDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Down")));
-                local.setCorRampas(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Rampas")));
-                local.setNumInterpretesUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Up")));
-                local.setNumInterpretesDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Down")));
-                local.setCorInterpretes(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Interpretes")));
+                local.setNumAudicaoUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Audicao_Up")));
+                local.setNumAudicaoDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Audicao_Down")));
+                local.setCorAudicao(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Audicao")));
+                local.setNumMobilidadeUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Mobilidade_Up")));
+                local.setNumMobilidadeDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Mobilidade_Down")));
+                local.setCorMobilidade(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Mobilidade")));
+                local.setNumVisaoUp(resultado.getString(resultado.getColumnIndexOrThrow("Num_Visao_Up")));
+                local.setNumVisaoDown(resultado.getString(resultado.getColumnIndexOrThrow("Num_Visao_Down")));
+                local.setCorVisao(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Visao")));
                 local.setTemMapa(resultado.getString(resultado.getColumnIndexOrThrow("Tem_Mapa")));
                 itens.add(local);
 
@@ -261,23 +261,23 @@ public class LocalRepositorio {
                 System.out.print(" ");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("TIPO")));
                 System.out.print(" ");
-                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Up")));
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Audicao_Up")));
                 System.out.println("");
-                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Libras_Down")));
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Audicao_Down")));
                 System.out.println("");
-                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Libras")));
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Audicao")));
                 System.out.println("");
-                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Up")));
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Mobilidade_Up")));
                 System.out.println("");
-                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Rampas_Down")));
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Mobilidade_Down")));
                 System.out.println("");
-                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Rampas")));
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Mobilidade")));
                 System.out.println("");
-                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Up")));
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Visao_Up")));
                 System.out.println("");
-                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Interpretes_Down")));
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Num_Visao_Down")));
                 System.out.println("");
-                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Interpretes")));
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Cor_Visao")));
                 System.out.println("");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("Tem_Mapa")));
                 System.out.println("");

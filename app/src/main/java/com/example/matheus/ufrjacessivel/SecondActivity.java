@@ -30,9 +30,9 @@ import java.util.ArrayList;
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ListView lstViewItem;
-    private TextView lblLibra;
-    private TextView lblRampas;
-    private TextView lblInterpretes;
+    private TextView lblAudicao;
+    private TextView lblMobilidade;
+    private TextView lblVisao;
     private TextView lblAtual = null;
 
     private DadosOpenHelper dadosOpenHelper;
@@ -51,13 +51,13 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
         lstViewItem = findViewById(R.id.lstViewItem);
 
-        lblLibra = findViewById(R.id.lblLibra);
-        lblRampas = findViewById(R.id.lblRampas);
-        lblInterpretes = findViewById(R.id.lblInterpretes);
+        lblAudicao = findViewById(R.id.lblAudicao);
+        lblMobilidade = findViewById(R.id.lblMobilidade);
+        lblVisao = findViewById(R.id.lblVisao);
 
-        lblLibra.setOnClickListener(this);
-        lblRampas.setOnClickListener(this);
-        lblInterpretes.setOnClickListener(this);
+        lblAudicao.setOnClickListener(this);
+        lblMobilidade.setOnClickListener(this);
+        lblVisao.setOnClickListener(this);
 
         criarConexao();
 
@@ -74,15 +74,15 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                 intent.putExtra("ID",locais.get(i).getId());
                 intent.putExtra("NOME",locais.get(i).getName());
-                intent.putExtra("NumLibraUp",locais.get(i).getNumLibraUp());
-                intent.putExtra("NumLibraDown",locais.get(i).getNumLibraDown());
-                intent.putExtra("COR_LIBRAS",locais.get(i).getCorLibras());
-                intent.putExtra("NumRampaUp",locais.get(i).getNumRampaUp());
-                intent.putExtra("NumRampaDown",locais.get(i).getNumRampaDown());
-                intent.putExtra("COR_RAMPAS",locais.get(i).getCorRampas());
-                intent.putExtra("NumInterpretesUp",locais.get(i).getNumInterpretesUp());
-                intent.putExtra("NumInterpretesDown",locais.get(i).getNumInterpretesDown());
-                intent.putExtra("COR_INTERPRETES",locais.get(i).getCorInterpretes());
+                intent.putExtra("NumAudicaoUp",locais.get(i).getNumAudicaoUp());
+                intent.putExtra("NumAudicaoDown",locais.get(i).getNumAudicaoDown());
+                intent.putExtra("COR_Audicao",locais.get(i).getCorAudicao());
+                intent.putExtra("NumMobilidadeUp",locais.get(i).getNumMobilidadeUp());
+                intent.putExtra("NumMobilidadeDown",locais.get(i).getNumMobilidadeDown());
+                intent.putExtra("COR_Mobilidade",locais.get(i).getCorMobilidade());
+                intent.putExtra("NumVisaoUp",locais.get(i).getNumVisaoUp());
+                intent.putExtra("NumVisaoDown",locais.get(i).getNumVisaoDown());
+                intent.putExtra("COR_Visao",locais.get(i).getCorVisao());
                 startActivityForResult(intent,1);
             }
         });
@@ -117,12 +117,12 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
         locais = localRepositorio.buscarTodos(S);
 
-        if(lblAtual == lblLibra) {
-            localRepositorio.ordenarLibras(locais);
-        }else if(lblAtual == lblInterpretes) {
-            localRepositorio.ordenarInterpretes(locais);
-        }else if(lblAtual == lblRampas) {
-            localRepositorio.ordenarRampas(locais);
+        if(lblAtual == lblAudicao) {
+            localRepositorio.ordenarAudicao(locais);
+        }else if(lblAtual == lblVisao) {
+            localRepositorio.ordenarVisao(locais);
+        }else if(lblAtual == lblMobilidade) {
+            localRepositorio.ordenarMobilidade(locais);
         }
 
         LocalListAdpter arrayAdapter = new LocalListAdpter(this,locais);
@@ -162,9 +162,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
             lblAtual = lbl;
 
-            clearLabel(lblLibra);
-            clearLabel(lblInterpretes);
-            clearLabel(lblRampas);
+            clearLabel(lblAudicao);
+            clearLabel(lblVisao);
+            clearLabel(lblMobilidade);
 
             lbl.setTypeface(ResourcesCompat.getFont(this,R.font.vast_shadow_regular));
             //lbl.setTextSize(20);

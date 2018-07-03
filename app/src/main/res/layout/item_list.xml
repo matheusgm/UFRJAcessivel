@@ -31,26 +31,26 @@
         android:layout_gravity="center">
 
         <ImageView
-            android:id="@+id/imageLibra"
+            android:id="@+id/imageAudicao"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/libra_white_48"
+            android:src="@drawable/audicao_white_48"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             />
         <ImageView
-            android:id="@+id/imageRampa"
+            android:id="@+id/imageMobilidade"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/rampa_white_48"
+            android:src="@drawable/mobilidade_white_48"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             />
         <ImageView
-            android:id="@+id/imageInterpretes"
+            android:id="@+id/imageVisao"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/interpretes_white_48"
+            android:src="@drawable/visao_white_48"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             />

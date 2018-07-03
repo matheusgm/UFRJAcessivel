@@ -5,39 +5,39 @@ public class Local {
     private int id;
     private String name;
     private String Tipo;
-    private String NumLibraUp;
-    private String NumLibraDown;
-    private String CorLibras;
-    private String NumRampaUp;
-    private String NumRampaDown;
-    private String CorRampas;
-    private String NumInterpretesUp;
-    private String NumInterpretesDown;
-    private String CorInterpretes;
+    private String NumAudicaoUp;
+    private String NumAudicaoDown;
+    private String CorAudicao;
+    private String NumMobilidadeUp;
+    private String NumMobilidadeDown;
+    private String CorMobilidade;
+    private String NumVisaoUp;
+    private String NumVisaoDown;
+    private String CorVisao;
     private String temMapa;
 
-    public String getCorLibras() {
-        return CorLibras;
+    public String getCorAudicao() {
+        return CorAudicao;
     }
 
-    public void setCorLibras(String corLibras) {
-        CorLibras = corLibras;
+    public void setCorAudicao(String corAudicao) {
+        CorAudicao = corAudicao;
     }
 
-    public String getCorRampas() {
-        return CorRampas;
+    public String getCorMobilidade() {
+        return CorMobilidade;
     }
 
-    public void setCorRampas(String corRampas) {
-        CorRampas = corRampas;
+    public void setCorMobilidade(String corMobilidade) {
+        CorMobilidade = corMobilidade;
     }
 
-    public String getCorInterpretes() {
-        return CorInterpretes;
+    public String getCorVisao() {
+        return CorVisao;
     }
 
-    public void setCorInterpretes(String corInterpretes) {
-        CorInterpretes = corInterpretes;
+    public void setCorVisao(String corVisao) {
+        CorVisao = corVisao;
     }
 
     public int getId() {
@@ -64,52 +64,52 @@ public class Local {
         this.name = name;
     }
 
-    public String getNumLibraUp() {
-        return NumLibraUp;
+    public String getNumAudicaoUp() {
+        return NumAudicaoUp;
     }
 
-    public void setNumLibraUp(String numLibraUp) {
-        NumLibraUp = numLibraUp;
+    public void setNumAudicaoUp(String numAudicaoUp) {
+        NumAudicaoUp = numAudicaoUp;
     }
 
-    public String getNumLibraDown() {
-        return NumLibraDown;
+    public String getNumAudicaoDown() {
+        return NumAudicaoDown;
     }
 
-    public void setNumLibraDown(String numLibraDown) {
-        NumLibraDown = numLibraDown;
+    public void setNumAudicaoDown(String numAudicaoDown) {
+        NumAudicaoDown = numAudicaoDown;
     }
 
-    public String getNumRampaUp() {
-        return NumRampaUp;
+    public String getNumMobilidadeUp() {
+        return NumMobilidadeUp;
     }
 
-    public void setNumRampaUp(String numRampaUp) {
-        NumRampaUp = numRampaUp;
+    public void setNumMobilidadeUp(String numMobilidadeUp) {
+        NumMobilidadeUp = numMobilidadeUp;
     }
 
-    public String getNumRampaDown() {
-        return NumRampaDown;
+    public String getNumMobilidadeDown() {
+        return NumMobilidadeDown;
     }
 
-    public void setNumRampaDown(String numRampaDown) {
-        NumRampaDown = numRampaDown;
+    public void setNumMobilidadeDown(String numMobilidadeDown) {
+        NumMobilidadeDown = numMobilidadeDown;
     }
 
-    public String getNumInterpretesUp() {
-        return NumInterpretesUp;
+    public String getNumVisaoUp() {
+        return NumVisaoUp;
     }
 
-    public void setNumInterpretesUp(String numInterpretesUp) {
-        NumInterpretesUp = numInterpretesUp;
+    public void setNumVisaoUp(String numVisaoUp) {
+        NumVisaoUp = numVisaoUp;
     }
 
-    public String getNumInterpretesDown() {
-        return NumInterpretesDown;
+    public String getNumVisaoDown() {
+        return NumVisaoDown;
     }
 
-    public void setNumInterpretesDown(String numInterpretesDown) {
-        NumInterpretesDown = numInterpretesDown;
+    public void setNumVisaoDown(String numVisaoDown) {
+        NumVisaoDown = numVisaoDown;
     }
 
     public String getTemMapa() {

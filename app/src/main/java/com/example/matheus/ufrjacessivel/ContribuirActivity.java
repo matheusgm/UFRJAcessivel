@@ -60,45 +60,45 @@ public class ContribuirActivity extends AppCompatActivity implements View.OnClic
         /*Local local = new Local();
         local.setName("Teste 1");
         local.setTipo("Serviços");
-        local.setNumLibraUp("4");
-        local.setNumLibraDown("4");
-        local.setNumInterpretesUp("5");
-        local.setNumInterpretesDown("2");
-        local.setNumRampaUp("6");
-        local.setNumRampaDown("5");
+        local.setNumAudicaoUp("4");
+        local.setNumAudicaoDown("4");
+        local.setNumVisaoUp("5");
+        local.setNumVisaoDown("2");
+        local.setNumMobilidadeUp("6");
+        local.setNumMobilidadeDown("5");
 
         localRepositorio.inserir2TESTE(local);
 
         local.setName("Teste 2");
         local.setTipo("Serviços");
-        local.setNumLibraUp("2");
-        local.setNumLibraDown("1");
-        local.setNumInterpretesUp("3");
-        local.setNumInterpretesDown("4");
-        local.setNumRampaUp("5");
-        local.setNumRampaDown("5");
+        local.setNumAudicaoUp("2");
+        local.setNumAudicaoDown("1");
+        local.setNumVisaoUp("3");
+        local.setNumVisaoDown("4");
+        local.setNumMobilidadeUp("5");
+        local.setNumMobilidadeDown("5");
 
         localRepositorio.inserir2TESTE(local);
 
         local.setName("Teste 3");
         local.setTipo("Serviços");
-        local.setNumLibraUp("6");
-        local.setNumLibraDown("5");
-        local.setNumInterpretesUp("2");
-        local.setNumInterpretesDown("2");
-        local.setNumRampaUp("3");
-        local.setNumRampaDown("4");
+        local.setNumAudicaoUp("6");
+        local.setNumAudicaoDown("5");
+        local.setNumVisaoUp("2");
+        local.setNumVisaoDown("2");
+        local.setNumMobilidadeUp("3");
+        local.setNumMobilidadeDown("4");
 
         localRepositorio.inserir2TESTE(local);
 
         local.setName("Teste 4");
         local.setTipo("Serviços");
-        local.setNumLibraUp("2");
-        local.setNumLibraDown("5");
-        local.setNumInterpretesUp("6");
-        local.setNumInterpretesDown("6");
-        local.setNumRampaUp("2");
-        local.setNumRampaDown("3");
+        local.setNumAudicaoUp("2");
+        local.setNumAudicaoDown("5");
+        local.setNumVisaoUp("6");
+        local.setNumVisaoDown("6");
+        local.setNumMobilidadeUp("2");
+        local.setNumMobilidadeDown("3");
 
         localRepositorio.inserir2TESTE(local);*/
 
