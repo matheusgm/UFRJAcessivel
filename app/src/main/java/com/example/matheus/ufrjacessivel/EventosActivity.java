@@ -31,13 +31,26 @@ public class EventosActivity extends AppCompatActivity {
 
         lstViewItem = findViewById(R.id.eventoLstViewItem);
 
-        //criarConexao();
+        criarConexao();
 
         getSupportActionBar().setTitle("Eventos");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //visualizarLista();
+        Evento e = new Evento();
+        e.setNome("Evento Teste");
+        e.setDataEvento("01/12/2018");
+        e.setEndereco("Universidade Federal do Rio de Janeiro");
+        e.setHorario("13:00");
+        //eventoRepositorio.inserir(e);
 
+        visualizarLista();
+
+    }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 
     private void visualizarLista(){

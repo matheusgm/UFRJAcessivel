@@ -2,7 +2,68 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:background="@drawable/item_list_round">
+
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dia_evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/mes_evento"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Nov"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/data_hora_evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed200"
+            android:text="04 de NOV as 22:00"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/nome_evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome do Evento"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/endereco_evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Endereco do Evento"
+            android:textColor="#3e3e3e" />
+
+    </LinearLayout>
+
+
+
+
 
 
 </LinearLayout>

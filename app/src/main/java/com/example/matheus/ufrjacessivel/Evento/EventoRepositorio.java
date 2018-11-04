@@ -4,7 +4,10 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class EventoRepositorio {
 
@@ -19,6 +22,13 @@ public class EventoRepositorio {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("NOME", evento.getNome());
+        contentValues.put("ENDERECO", evento.getEndereco());
+        contentValues.put("HORARIO", evento.getHorario());
+        contentValues.put("DATA_EVENTO", evento.getDataEvento());
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        contentValues.put("DATA_CRIACAO", dateFormat.format(date));
 
         conexao.insertOrThrow("EVENTO",null,contentValues);
 
@@ -28,6 +38,10 @@ public class EventoRepositorio {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("NOME", evento.getNome());
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        contentValues.put("DATA_CRIACAO", dateFormat.format(date));
+        //System.out.println("Data "+ Integer.toString(evento.getId())+" - "+dateFormat.format(date));
 
         conexao.insertOrThrow("EVENTO",null,contentValues);
 
@@ -93,6 +107,10 @@ public class EventoRepositorio {
 
                     evento.setId(resultado.getInt(resultado.getColumnIndexOrThrow("CODIGO")));
                     evento.setNome(resultado.getString(resultado.getColumnIndexOrThrow("NOME")));
+                    evento.setEndereco(resultado.getString(resultado.getColumnIndexOrThrow("ENDERECO")));
+                    evento.setHorario(resultado.getString(resultado.getColumnIndexOrThrow("HORARIO")));
+                    evento.setDataEvento(resultado.getString(resultado.getColumnIndexOrThrow("DATA_EVENTO")));
+                    evento.setDataCriacao(resultado.getString(resultado.getColumnIndexOrThrow("DATA_CRIACAO")));
 
                     return evento;
                 }
@@ -122,6 +140,10 @@ public class EventoRepositorio {
 
                 evento.setId(resultado.getInt(resultado.getColumnIndexOrThrow("CODIGO")));
                 evento.setNome(resultado.getString(resultado.getColumnIndexOrThrow("NOME")));
+                evento.setEndereco(resultado.getString(resultado.getColumnIndexOrThrow("ENDERECO")));
+                evento.setHorario(resultado.getString(resultado.getColumnIndexOrThrow("HORARIO")));
+                evento.setDataEvento(resultado.getString(resultado.getColumnIndexOrThrow("DATA_EVENTO")));
+                evento.setDataCriacao(resultado.getString(resultado.getColumnIndexOrThrow("DATA_CRIACAO")));
 
                 itens.add(evento);
 
@@ -149,6 +171,14 @@ public class EventoRepositorio {
                 System.out.print(resultado.getInt(resultado.getColumnIndexOrThrow("CODIGO")));
                 System.out.print(" ");
                 System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("NOME")));
+                System.out.print(" ");
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("ENDERECO")));
+                System.out.print(" ");
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("HORARIO")));
+                System.out.print(" ");
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("DATA_EVENTO")));
+                System.out.print(" ");
+                System.out.print(resultado.getString(resultado.getColumnIndexOrThrow("DATA_CRIACAO")));
                 System.out.print(" ");
 
             }while(resultado.moveToNext());

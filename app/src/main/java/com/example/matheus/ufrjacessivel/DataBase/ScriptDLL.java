@@ -27,4 +27,18 @@ public class ScriptDLL {
         return sql.toString();
     }
 
+    public static String getCreateTableEvento() {
+        StringBuilder sql = new StringBuilder();
+
+        sql.append(" CREATE TABLE IF NOT EXISTS EVENTO ( ");
+        sql.append(" CODIGO INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL, ");
+        sql.append(" NOME VARCHAR (200) NOT NULL DEFAULT(''), "); // Nome do Evento
+        sql.append(" ENDERECO VARCHAR (200), ");
+        sql.append(" HORARIO VARCHAR (200), ");
+        sql.append(" DATA_EVENTO VARCHAR (200), ");
+        sql.append(" DATA_CRIACAO VARCHAR (200) ) ");
+
+        return sql.toString();
+    }
+
 }

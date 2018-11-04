@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnAlimentacao;
     private Button btnAulas;
     private Button btnContribuir;
+    private Button btnEventos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAlimentacao = findViewById(R.id.btnAlimentacao);
         btnAulas = findViewById(R.id.btnAulas);
         btnContribuir = findViewById(R.id.btnContribuir);
+        btnEventos = findViewById(R.id.btnEventos);
 
         btnServicos.setOnClickListener(this);
         btnAlimentacao.setOnClickListener(this);
         btnAulas.setOnClickListener(this);
         btnContribuir.setOnClickListener(this);
+        btnEventos.setOnClickListener(this);
 
     }
 
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String name = btn.getText().toString();
         if(name.equals("Contribuir")){
             Intent intent = new Intent(this, ContribuirActivity.class);
+            startActivity(intent);
+        }else if(name.equals("Eventos")){
+            Intent intent = new Intent(this, EventosActivity.class);
             startActivity(intent);
         }else{
             Intent intent = new Intent(this, SecondActivity.class);

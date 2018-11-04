@@ -29,6 +29,10 @@
             android:name=".ContribuirActivity"
             android:parentActivityName=".MainActivity">
         </activity>
+        <activity
+            android:name=".EventosActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>
